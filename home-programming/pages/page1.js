@@ -1,23 +1,17 @@
 console.log('I second page');
 const container = document.getElementById('elem');
 const btnAll = document.querySelectorAll('.btn');
-for (const item of btnAll) {
-    item.addEventListener('click', (event) => {
-        if(event) {
-            item.classList.add('btn2')
-        }    
-        for (const item of btnAll) {
-            if(item.className === 'btn btn2') {
-                
-            }
+// добавить класс и удалить этот же класс у других элемнтах
+for (var i = 0; i < btnAll.length; i++) {
+    btnAll[i].onclick = function (event) {
+        removeClass();
+        if (event) {
+            this.classList.add("active");
         }
-        // if (event & item.className === 'btn btn2') {
-        //     item.classList.remove('btn2')
-        // }
-        // item.classList.add('btn2')
-        // if (item.className === 'btn btn2') {
-        //     item.classList.remove('btn2')
-        // }
-        
-    })
+    }
+}
+function removeClass(){
+  for (var i = 0; i < btnAll.length; i++) {
+    btnAll[i].classList.remove('active');
+  }
 }
