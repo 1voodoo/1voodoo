@@ -50,3 +50,55 @@ function twice(addUser) {
     }
     return arrTwo.join('');
 };
+// изменения массива по условию
+function spinWords(string){
+    let arr = string.split(' ');
+   for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    if(arr[i].length >= 5) {
+      arr[i] = arr[i].split('').reverse().join('');
+    }
+  }
+  return arr.join(' ')
+}
+  console.log(spinWords('Hey market123 ILoveMyMother'));
+// изменения массива по условию
+function openOrSenior(data){
+    let newArr = [];
+  for (let i = 0; i < data.length; i++) {
+    if(data[i][0] >= 55 && data[i][1] >= 7){
+      newArr.push('Senior')
+     } else {
+      newArr.push('Open')
+      }
+    }
+    return newArr
+}
+// найти максимальное и минимальное число в строке
+function highAndLow(numbers){
+    let arr = numbers.split(' ');
+    let arrNew = [];
+    for (let i = 0; i < arr.length; i++) {
+      let num = Number(arr[i])
+      arr[i] = num
+    };
+    let big;
+    let less;
+      less = Math.min.apply(null, arr)
+      big = Math.max.apply(null, arr)
+    
+      arrNew.push(big)
+      arrNew.push(less)
+      return arrNew.join(' ')
+}
+// найти друзей по условию
+let arr = ['mark', 'Lona', 'Kate', 'lol', 'mom']
+let myFriend = []
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i].length);
+  if(arr[i].length === 4) {
+    arr[i] = arr[i]
+    myFriend.push(arr[i])
+  }
+  
+}  
