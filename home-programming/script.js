@@ -101,4 +101,27 @@ for (let i = 0; i < arr.length; i++) {
     myFriend.push(arr[i])
   }
   
-}  
+}
+// перемножить все числа строки
+function squareDigits(num){
+  let str = String(num)
+    let arr = str.split('');
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * arr[i]
+        
+    }
+    return Number(arr.join(''))
+ 
+}
+// Ёлочка
+function towerBuilder(nFloors) {
+  let arr= []
+  let j = 0
+  let sum = ''
+  for (let i = '*'; j < nFloors; j++) {
+      sum += i
+      arr.push(sum)
+  }
+  return arr
+}
+console.log(towerBuilder(10));  
