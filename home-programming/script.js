@@ -22,7 +22,8 @@ btnLeft.addEventListener('click', () => {
 function sliceKnife(word) {
     let result = word.slice(0,1).toUpperCase() + word.slice(1,-1) + word.slice(-1).toUpperCase();
     return result
-}
+};
+
 // Разный размер букв
 function anotherSize(word) {
     let cut = word.split('');
@@ -50,6 +51,7 @@ function twice(addUser) {
     }
     return arrTwo.join('');
 };
+
 // изменения массива по условию
 function spinWords(string){
     let arr = string.split(' ');
@@ -61,7 +63,7 @@ function spinWords(string){
   }
   return arr.join(' ')
 }
-  console.log(spinWords('Hey market123 ILoveMyMother'));
+
 // изменения массива по условию
 function openOrSenior(data){
     let newArr = [];
@@ -74,6 +76,7 @@ function openOrSenior(data){
     }
     return newArr
 }
+
 // найти максимальное и минимальное число в строке
 function highAndLow(numbers){
     let arr = numbers.split(' ');
@@ -91,6 +94,7 @@ function highAndLow(numbers){
       arrNew.push(less)
       return arrNew.join(' ')
 }
+
 // найти друзей по условию
 let arr = ['mark', 'Lona', 'Kate', 'lol', 'mom']
 let myFriend = []
@@ -102,6 +106,7 @@ for (let i = 0; i < arr.length; i++) {
   }
   
 }
+
 // перемножить все числа строки
 function squareDigits(num){
   let str = String(num)
@@ -113,6 +118,7 @@ function squareDigits(num){
     return Number(arr.join(''))
  
 }
+
 // Ёлочка
 function towerBuilder(nFloors) {
   let arr= []
@@ -124,4 +130,31 @@ function towerBuilder(nFloors) {
   }
   return arr
 }
-console.log(towerBuilder(10));  
+console.log(towerBuilder(10));
+
+// убрать дефис
+function pop(str) {
+  let arr = str.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join('')
+  return arr
+}
+console.log(pop("-background-color"));
+
+// забрать у массива диапазон чисел
+
+let arrTwo = [5, 3, 8, 1];
+function pop(arr, a, b) {
+  let arr2 = arr.filter(item => (item >= a && item <= b))
+  return arr2
+}
+
+// Найти средне арифметическое
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+let arrNames = [ vasya, petya, masha ];
+
+function num(arr) {
+  let newarr = arr.reduce((prev, user) => prev + user.age, 0) / arr.length;
+  return newarr
+}
